@@ -5,33 +5,35 @@
 }
 
 body {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Dark Mode Default */
+.dark-mode {
     background-color: #16213D;
+    color: #fff;
 }
 
-.mode {
-    width: 40px;
-    height: 40px;
-    border-radius: 50px;
-    background-color: white;
+/* Light Mode After Click the modeBtn  */
+.light-mode {
+    background-color: #e1dede;
+    color: #000;
 }
 
+/* Navigation */
 nav {
     width: 100%;
-    height: 10vh;
+    height: 3vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 3rem 4rem;
+    padding: 2rem 4rem;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    width: 50%;
-}
-
-.theme {
+.logo, .theme {
     display: flex;
     align-items: center;
     justify-content: end;
@@ -39,38 +41,274 @@ nav {
 }
 
 .mode {
-    cursor: pointer;
+    box-shadow: -1px 2px 40px 10px rgba(67, 67, 67, 0.1);
 }
 
+/* Theme Button */
+.mode {
+    padding: .5rem 1rem;
+    background-color: white;
+    border-radius: .4rem;
+    color: #000;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Light Mode Button */
+body.light-mode .mode {
+    background-color: #000;
+    color: #fff;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    /* display: none; */
+}
+
+/* box container */
 .game {
     height: 60vh;
     width: 60vh;
-    position: absolute;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    flex-wrap: wrap;
     box-shadow: -1px 2px 40px 3px #e945603c;
+    border: 1px solid #d7d7d74f;
+    transition: all linear;
 }
 
+/* Cards */
 .card {
     width: 33.3%;
     height: 33.3%;
-    border: 1px solid #d7d7d74f;
-    background-color: #0F3460;
-    color: #fff;
-    font-size: 4vw;
-    text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 4vw;
+    cursor: pointer;
+    border: 1px solid #d7d7d74f;
+    background-color: #0F3460;
+    color: white;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.card:hover {
+    background-color: rgb(33, 141, 183);
+}
+
+/* Light Mode Cards */
+body.light-mode .card {
+    background-color: rgba(255, 255, 255);
+    color: black;
+    border: 1px solid rgba(0, 0, 0, 0.093);
+}
+
+body.light-mode .game {
+    box-shadow: -1px 2px 40px 3px rgba(67, 67, 67, 0.1);
+}
+
+body.light-mode .btn1 {
+    background-color: #000;
+}
+
+body.light-mode .btn2 {
+    background-color: #00000084;
+}
+
+body.light-mode .result {
+    background-color: #fff;
+    border: 1px solid #d7d7d7;
+    box-shadow: -1px 2px 40px 3px #e7e7e7a4;
+}
+
+body.light-mode .btn2:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+body.light-mode .card:hover {
+    background-color: rgb(65, 33, 183);
+    color: white;
+}
+
+.btn1, .btn2 {
+    width: 100%;
+    height: 8vh;
+    background-color: #162d4a;
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     cursor: pointer;
 }
 
-.card:hover {
-    background-color: #E94560;
+.btn2 {
+    background-color: rgb(65, 33, 183);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    cursor: pointer;
+    color: #ffffffe3;
+}
+
+.btn2 button {
+    cursor: pointer;
+}
+
+.result {
+    width: 25vw;
+    height: 50vh;
+    background-color: rgba(67, 67, 67, 0.42);
+    box-shadow: -1px 2px 40px 3px #0f336059;
+    border: 1px solid #ffffff2a;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1rem;
+    padding: .3rem .6rem 0 .6rem;
+    display: none;
+}
+
+.cross-btn {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.cross-btn button svg {
+    cursor: pointer;
+    color: #fff;
+}
+
+body.light-mode .cross-btn svg {
+    color: #000;
+}
+
+.dark-mode .cross-btn svg path {
+    fill: #fff;  /* ✅ This should work */
+}
+
+
+.congrats {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.congrats h2 {
+    font-size: 2.3vw;
+    font-weight: 500;
+}
+
+.msg {
+    width: 100%;
+    height: 43%;
+    /* background-color: red; */
+    padding: 0 2rem;
+    line-height: 1.3;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.msg h6 {
+    font-size: 1.8vw;
+    font-weight: 400;
+}
+
+.msg p {
+    font-weight: 200;
+}
+
+.res-btn {
+    width: 100%;
+    height: 18%;
+    background-color: #00000084;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5vw;
+    font-weight: 500;
+    color: #fff;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.res-btn button {
+    cursor: pointer;
+}
+
+.res-btn:hover {
+    background-color: #000;
+}
+
+@media (max-width: 768px) {
+    .game {
+        width: 100%;
+        height: auto;
+    }
+    main {
+        padding: 6rem 1rem;
+    }
+    .card {
+        width: 30vw;
+        height: 15vh;
+    }
+    .btn1, .btn2 {
+        font-size: 4vw;
+        height: 6vh;
+    }
+    .result {
+        display: none;
+        width: 90%;
+        height: auto;
+        padding: 1rem .5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .congrats h2 {
+        font-size: 8vw;
+    }
+    .msg h6 {
+        font-size: 6vw;
+    }
+    .msg p {
+        font-size: 4vw;
+    }
+    .msg {
+        height: 18vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .res-btn button {
+        padding: 1.5rem 2rem;
+        font-size: 4vw;
+    }
+    nav {
+        padding: 2.5rem 1rem;
+    }
 }

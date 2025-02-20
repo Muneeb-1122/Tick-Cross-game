@@ -3,30 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- tailwind css link -->
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <!-- remix icons link  -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Tick Cross</title>
 </head>
-<body>
+<body class="dark-mode">
     <nav>
         <div class="logo"></div>
         <div class="theme">
-            <button class="mode"></button>
+            <button class="mode">
+                <p class="mode-para">🌙</p>
+            </button>
         </div>
     </nav>
     <main>
-        <div class="game">
-            <div class="card transition-all duration-500">1</div>
-            <div class="card transition-all duration-500">2</div>
-            <div class="card transition-all duration-500">3</div>
-            <div class="card transition-all duration-500">4</div>
-            <div class="card transition-all duration-500">5</div>
-            <div class="card transition-all duration-500">6</div>
-            <div class="card transition-all duration-500">7</div>
-            <div class="card transition-all duration-500">8</div>
-            <div class="card transition-all duration-500">9</div>
+        <div class="btn1">
+            <h6>Tick Cross Game</h6>
         </div>
+        <div class="game">
+            <div class="card box"></div>
+            <div class="card box"></div>
+            <div class="card box"></div>
+            <div class="card box"></div>
+            <div class="card box"></div>
+            <div class="card box"></div>
+            <div class="card box"></div>
+            <div class="card box"></div>
+            <div class="card box"></div>
+        </div>
+        <div class="btn2 againbtn2">
+            <button>Reset Game</button>
+        </div> 
     </main>
+    <div class="result">
+        <div class="cross-btn">
+            <button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                    <g clip-path="url(#clip0_1468_127)">
+                      <path d="M12.1941 11.1045L17.1441 6.15454L18.5581 7.56854L13.6081 12.5185L18.5581 17.4685L17.1441 18.8825L12.1941 13.9325L7.24408 18.8825L5.83008 17.4685L10.7801 12.5185L5.83008 7.56854L7.24408 6.15454L12.1941 11.1045Z" fill="black"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_1468_127">
+                        <rect width="24" height="24" fill="white" transform="translate(0.194336 0.518555)"/>
+                      </clipPath>
+                    </defs>
+                  </svg>
+            </button>
+        </div>
+        <div class="congrats">
+            <h2>Congratulations! 🏆</h2>
+        </div>  
+        <div class="msg">
+            <h6> Player X Wins!</h6>
+            <p>Great job! You played well. Want to play again?</p>
+        </div>
+        <div class="res-btn">
+            <button>New Game</button>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

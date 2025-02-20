@@ -1,39 +1,56 @@
-var body = document.querySelector("body");
-var cards = document.querySelectorAll(".card");
-var modeBtn = document.querySelector(".mode");
+// const body = document.body;
+// const modeBtn = document.querySelector(".mode");
+// const modePara = document.querySelector(".mode-para");
+// const btn1 = document.querySelector(".btn1");
+// const result = document.querySelector(".result");
+// const main = document.querySelector("main");
 
-var currMode = "dark";
+// modePara.innerText = body.classList.contains("light-mode") ? "☀️" : "🌙";
 
+// // Toggle Dark/Light Mode
+// modeBtn.addEventListener("click", () => {
+//     body.classList.toggle("light-mode");
+//     body.classList.toggle("dark-mode");
+
+//     console.log(body.classList.contains("light-mode") ? "Light mode activated" : "Dark mode activated");
+// });
+
+// btn1.addEventListener('click', () => {
+//     result.style.display = 'block';
+//     main.style.display = 'none';
+// })
+
+
+const body = document.body;
+const modeBtn = document.querySelector(".mode");
+const btn2 = document.querySelector(".btn2");
+const result = document.querySelector(".result");
+const main = document.querySelector("main");
+const resBtn = document.querySelector(".res-btn");
+const crossBtn = document.querySelector(".cross-btn");
+
+// Toggle Dark/Light Mode
 modeBtn.addEventListener("click", () => {
-    if (currMode === "dark") {
-        currMode = "light";
-        body.style.backgroundColor = "#16213D";
+    body.classList.toggle("light-mode");
+    body.classList.toggle("dark-mode");
 
-        cards.forEach(card => {
-            card.style.backgroundColor = "#0F3460";
-            card.style.border = "1px solid #d7d7d74f";
-            card.style.color = "#fff";
-            card.style.transition = "none";
-            card.style.duration = "none";
-        });
-        
-        modeBtn.style.backgroundColor = "#fff";
-        console.log("Dark mode activated");
-    } 
-    else {
-        currMode = "dark";
-        body.style.backgroundColor = "#fafafa";
+    // Update button icon
+    modeBtn.innerText = body.classList.contains("light-mode") ? "☀️" : "🌙";
+});
 
-        cards.forEach(card => {
-            card.style.backgroundColor = "#fff";
-            card.style.color = "#000";
-            card.style.border = "1px solid #000";
-            card.style.transition = "none";
-            card.style.duration = "none";
-            card.style.hover = "#E94560";
-        });
-        modeBtn.style.backgroundColor = "#000";
+// Show result and hide game board
+btn2.addEventListener("click", () => {
+    result.style.display = "block";
+    main.style.display = "none";
+});
 
-        console.log("Light mode activated");
-    }
+// Hide popup and show game board again
+resBtn.addEventListener("click", () => {
+    result.style.display = "none";
+    main.style.display = "flex";
+});
+
+crossBtn.addEventListener("click", () => {
+    result.style.display = "none";
+    main.style.display = "flex";
 });
