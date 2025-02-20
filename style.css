@@ -9,6 +9,7 @@ body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    padding: 1rem;
 }
 
 /* Dark Mode Default */
@@ -23,6 +24,10 @@ body {
     color: #000;
 }
 
+body.light-mode nav {
+    background-color: #1F2937;
+}
+
 /* Navigation */
 nav {
     width: 100%;
@@ -30,7 +35,9 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 2rem 4rem;
+    padding: 2rem;
+    background-color: #656565;
+    border-radius: .4rem;
 }
 
 .logo, .theme {
@@ -38,6 +45,18 @@ nav {
     align-items: center;
     justify-content: end;
     width: 50%;
+}
+
+.logo {
+    justify-content: start;
+}
+
+.logo h6 {
+    font-weight: 900;
+}
+
+body.light-mode h6 {
+    color: #fff;
 }
 
 .mode {
@@ -58,7 +77,6 @@ nav {
 
 /* Light Mode Button */
 body.light-mode .mode {
-    background-color: #000;
     color: #fff;
 }
 
@@ -68,7 +86,7 @@ main {
     gap: 1rem;
     align-items: center;
     justify-content: center;
-    /* display: none; */
+    padding-top: 2rem;
 }
 
 /* box container */
@@ -80,7 +98,6 @@ main {
     align-items: center;
     justify-content: center;
     box-shadow: -1px 2px 40px 3px #e945603c;
-    border: 1px solid #d7d7d74f;
     transition: all linear;
 }
 
@@ -307,6 +324,12 @@ body.light-mode .cross-btn svg {
     .res-btn button {
         padding: 1.5rem 2rem;
         font-size: 4vw;
+    }
+    .res-btn {
+        background-color: #000;
+    }
+    .res-btn:hover {
+        display: none;
     }
     nav {
         padding: 2.5rem 1rem;
