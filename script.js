@@ -29,6 +29,8 @@ const main = document.querySelector("main");
 const resBtn = document.querySelector(".res-btn");
 const crossBtn = document.querySelector(".cross-btn");
 
+result.style.display = "none";
+
 // Toggle Dark/Light Mode
 modeBtn.addEventListener("click", () => {
     body.classList.toggle("light-mode");
@@ -37,6 +39,7 @@ modeBtn.addEventListener("click", () => {
     // Update button icon
     modeBtn.innerText = body.classList.contains("light-mode") ? "☀️" : "🌙";
 });
+
 
 // Show result and hide game board
 btn2.addEventListener("click", () => {

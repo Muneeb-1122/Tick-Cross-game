@@ -24,10 +24,6 @@ body {
     color: #000;
 }
 
-body.light-mode nav {
-    background-color: #1F2937;
-}
-
 /* Navigation */
 nav {
     width: 100%;
@@ -36,11 +32,19 @@ nav {
     align-items: center;
     justify-content: space-around;
     padding: 2rem;
-    background-color: #656565;
-    border-radius: .4rem;
+    background-color:  rgba(67, 67, 67, 0.42);
+    box-shadow: -1px 2px 40px 3px #0f336059;
+    border: 1px solid #ffffff2a;
+    border-radius: .6rem;
+    font-weight: 900;
 }
 
-.logo, .theme {
+body.light-mode nav {
+    background-color: #fff;
+    box-shadow: none;
+}
+
+.theme {
     display: flex;
     align-items: center;
     justify-content: end;
@@ -48,16 +52,11 @@ nav {
 }
 
 .logo {
-    justify-content: start;
+    display: flex;
+    align-items: center;
+    width: 50%;
 }
 
-.logo h6 {
-    font-weight: 900;
-}
-
-body.light-mode h6 {
-    color: #fff;
-}
 
 .mode {
     box-shadow: -1px 2px 40px 10px rgba(67, 67, 67, 0.1);
@@ -77,6 +76,7 @@ body.light-mode h6 {
 
 /* Light Mode Button */
 body.light-mode .mode {
+    background-color: #000;
     color: #fff;
 }
 
@@ -86,7 +86,8 @@ main {
     gap: 1rem;
     align-items: center;
     justify-content: center;
-    padding-top: 2rem;
+    padding-top: 2.5rem;
+    /* display: none; */
 }
 
 /* box container */
@@ -98,6 +99,7 @@ main {
     align-items: center;
     justify-content: center;
     box-shadow: -1px 2px 40px 3px #e945603c;
+    border: 1px solid #d7d7d74f;
     transition: all linear;
 }
 
@@ -267,17 +269,13 @@ body.light-mode .cross-btn svg {
     font-size: 1.5vw;
     font-weight: 500;
     color: #fff;
-    border-radius: .5rem;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .res-btn button {
     cursor: pointer;
-}
-
-.res-btn:hover {
-    background-color: #000;
+    font-weight: 900;
 }
 
 @media (max-width: 768px) {
@@ -286,7 +284,7 @@ body.light-mode .cross-btn svg {
         height: auto;
     }
     main {
-        padding: 6rem 1rem;
+        padding: 6rem 0rem;
     }
     .card {
         width: 30vw;
@@ -321,17 +319,14 @@ body.light-mode .cross-btn svg {
         align-items: center;
         justify-content: center;
     }
-    .res-btn button {
-        padding: 1.5rem 2rem;
-        font-size: 4vw;
-    }
     .res-btn {
         background-color: #000;
     }
-    .res-btn:hover {
-        display: none;
+    .res-btn button {
+        padding: 1rem 0rem;
+        font-size: 4vw;
     }
     nav {
-        padding: 2.5rem 1rem;
+        padding: 2rem 1rem;
     }
 }
