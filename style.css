@@ -10,117 +10,30 @@ body {
     align-items: center;
     justify-content: center;
     padding: 1rem;
+    position: relative;
 }
 
 /* Dark Mode Default */
 .dark-mode {
-    background-color: #16213D;
+    background-color: #000;
     color: #fff;
 }
 
 /* Light Mode After Click the modeBtn  */
 .light-mode {
-    background-color: #e1dede;
+    background-color: #F5F4F4;
     color: #000;
-}
-
-/* Navigation */
-nav {
-    width: 100%;
-    height: 3vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 2rem;
-    background-color:  rgba(67, 67, 67, 0.42);
-    box-shadow: -1px 2px 40px 3px #0f336059;
-    border: 1px solid #ffffff2a;
-    border-radius: .6rem;
-    font-weight: 900;
 }
 
 body.light-mode nav {
     background-color: #fff;
-    box-shadow: none;
-}
-
-.theme {
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    width: 50%;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    width: 50%;
-}
-
-
-.mode {
-    box-shadow: -1px 2px 40px 10px rgba(67, 67, 67, 0.1);
-}
-
-/* Theme Button */
-.mode {
-    padding: .5rem 1rem;
-    background-color: white;
-    border-radius: .4rem;
-    color: #000;
-    cursor: pointer;
-    border: none;
-    font-size: 1rem;
-    font-weight: 600;
+    box-shadow: -1px 2px 30px 0px rgba(67, 67, 67, 0.1);
 }
 
 /* Light Mode Button */
 body.light-mode .mode {
     background-color: #000;
     color: #fff;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
-    justify-content: center;
-    padding-top: 2.5rem;
-    /* display: none; */
-}
-
-/* box container */
-.game {
-    height: 60vh;
-    width: 60vh;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    box-shadow: -1px 2px 40px 3px #e945603c;
-    border: 1px solid #d7d7d74f;
-    transition: all linear;
-}
-
-/* Cards */
-.card {
-    width: 33.3%;
-    height: 33.3%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 4vw;
-    cursor: pointer;
-    border: 1px solid #d7d7d74f;
-    background-color: #0F3460;
-    color: white;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-/* Hover Effect */
-.card:hover {
-    background-color: rgb(33, 141, 183);
 }
 
 /* Light Mode Cards */
@@ -131,7 +44,6 @@ body.light-mode .card {
 }
 
 body.light-mode .game {
-    box-shadow: -1px 2px 40px 3px rgba(67, 67, 67, 0.1);
 }
 
 body.light-mode .btn1 {
@@ -158,6 +70,144 @@ body.light-mode .card:hover {
     color: white;
 }
 
+
+body.light-mode .cross-btn svg {
+    color: #000;
+}
+
+.dark-mode .cross-btn svg path {
+    fill: #fff;  
+}
+
+.dark-mode .all-result {
+    background-color:  rgba(67, 67, 67, 0.42);
+}
+
+.dark-mode .all-result h5 {
+    border: 1px solid #ffffff0b;
+}
+
+.dark-mode .player-1 {
+    background-color:  rgba(67, 67, 67, 0.42);
+    border: 1px solid #ffffff0b;
+}
+
+.dark-mode .player-2 {
+    background-color:  rgba(67, 67, 67, 0.42);
+    border: 1px solid #ffffff0b;
+}
+
+.dark-mode .all-result-heading {
+    background-color: #000;
+}
+
+.dark-mode .total-matches {
+    background-color: rgba(255, 0, 0, 0.897);
+}
+
+/* Navigation */
+nav {
+    width: 100%;
+    /* height: 3vh; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: .7em 1.5rem;
+    background-color:  rgba(67, 67, 67, 0.42);
+    box-shadow: -1px 2px 40px 3px #0f336059;
+    border: 1px solid #ffffff2a;
+    border-radius: .6rem;
+    font-weight: 900;
+}
+
+.theme {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 50%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.mode {
+    box-shadow: 0px 2px 4px 2px rgba(67, 67, 67, 0.1);
+}
+
+/* Theme Button */
+.mode {
+    padding: .5rem 1rem;
+    background-color: white;
+    border-radius: .4rem;
+    color: #000;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2.5rem;
+    /* display: none; */
+    position: relative;
+}
+
+/* box container */
+.game {
+    height: 60vh;
+    width: 60vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid #d7d7d74f; */
+    transition: all linear;
+}
+
+/* Cards */
+.card {
+    width: 33.3%;
+    height: 33.3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4vw;
+    cursor: pointer;
+    border: 1px solid #ffffff17;
+    background-color: rgba(67, 67, 67, 0.42);
+    color: white;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.round1 {
+    border-radius: .4rem 0 0 0;
+}
+
+.round2 {
+    border-radius: 0 .4rem 0 0;
+}
+
+.round3 {
+    border-radius: 0 0 0 .4rem;
+}
+
+.round4 {
+    border-radius: 0 0 .4rem 0;;
+}
+
+/* Hover Effect */
+.card:hover {
+    background-color: #7979798f;
+}
+
 .btn1, .btn2 {
     width: 100%;
     height: 8vh;
@@ -170,10 +220,11 @@ body.light-mode .card:hover {
     justify-content: center;
     text-align: center;
     cursor: pointer;
+    border-radius: .4rem;
 }
 
 .btn2 {
-    background-color: rgb(65, 33, 183);
+    background-color: rgba(67, 67, 67, 0.42);
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
     cursor: pointer;
     color: #ffffffe3;
@@ -185,22 +236,22 @@ body.light-mode .card:hover {
 
 .result {
     width: 25vw;
-    height: 50vh;
+    height: auto;
     background-color: rgba(67, 67, 67, 0.42);
     box-shadow: -1px 2px 40px 3px #0f336059;
     border: 1px solid #ffffff2a;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 50%);
     border-radius: 1rem;
-    padding: .3rem .6rem 0 .6rem;
+    padding: 0rem .6rem .6rem .6rem;
     display: none;
 }
 
 .cross-btn {
     width: 100%;
-    height: 15%;
+    padding: .6rem 0rem;
     display: flex;
     align-items: center;
     justify-content: end;
@@ -211,18 +262,9 @@ body.light-mode .card:hover {
     color: #fff;
 }
 
-body.light-mode .cross-btn svg {
-    color: #000;
-}
-
-.dark-mode .cross-btn svg path {
-    fill: #fff;  /* ✅ This should work */
-}
-
-
 .congrats {
     width: 100%;
-    height: 20%;
+    /* background-color: red; */
     display: flex;
     flex-direction: column;
     gap: .5rem;
@@ -232,16 +274,15 @@ body.light-mode .cross-btn svg {
 
 .congrats h2 {
     font-size: 2.3vw;
-    font-weight: 500;
+    font-weight: 900;
 }
 
 .msg {
     width: 100%;
-    height: 43%;
     /* background-color: red; */
-    padding: 0 2rem;
+    padding: 1.5rem 0rem;
     line-height: 1.3;
-    /* background-color: red; */
+    /* background-color: green; */
     display: flex;
     flex-direction: column;
     gap: .5rem;
@@ -261,7 +302,8 @@ body.light-mode .cross-btn svg {
 
 .res-btn {
     width: 100%;
-    height: 18%;
+    padding: .5rem 0;
+    /* background-color: #00000084; */
     background-color: #00000084;
     display: flex;
     align-items: center;
@@ -271,6 +313,7 @@ body.light-mode .cross-btn svg {
     color: #fff;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    border-radius: .6rem;
 }
 
 .res-btn button {
@@ -278,13 +321,82 @@ body.light-mode .cross-btn svg {
     font-weight: 900;
 }
 
+.all-result {
+    width: 20%;
+    height: auto;
+    background-color: white;
+    box-shadow: -1px 2px 20px 3px rgba(67, 67, 67, 0.1);
+    border: 1px solid #ffffff2a;
+    border-radius: .6rem;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    transform: translate(-6%, 55%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem;
+    gap: .7rem;
+}
+
+.all-result h5 {
+    width: 100%;
+    padding: .5rem;
+    border-radius: .4rem;
+    /* background-color: #00000084; */
+    background-color: #000;
+    color: #fff;
+    font-size: 1.4vw;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    justify-content: center;
+    border: 1px solid #d7d7d74f;
+}
+
+.player-1 {
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem .8rem;
+    border-radius: .4rem;
+    background-color: #e1dede58;
+    width: 100%;
+    border: 1px solid #d7d7d74f;
+    font-weight: 400;
+}
+
+.player-2 {
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem .8rem;
+    border-radius: .4rem;
+    background-color: #e1dede58;
+    width: 100%;
+    border: 1px solid #d7d7d74f;
+    font-weight: 400;
+}
+
+.total-matches {
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem .8rem;
+    border-radius: .4rem;
+    background-color: #E1DEDE;
+    width: 100%;
+    border: 1px solid #d7d7d74f;
+    font-weight: 700;
+}
+
 @media (max-width: 768px) {
     .game {
         width: 100%;
         height: auto;
+        box-shadow: 0px 0px 40px 0px rgba(67, 67, 67, 0.1);
     }
     main {
-        padding: 6rem 0rem;
+        padding: 8rem 0rem;
     }
     .card {
         width: 30vw;
@@ -298,35 +410,48 @@ body.light-mode .cross-btn svg {
         display: none;
         width: 90%;
         height: auto;
-        padding: 1rem .5rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
+        padding: .5rem .5rem .7rem .5rem;
+    }
+    .congrats{
+        padding: 0;
+        /* background-color: red; */
+    }
+    .msg {
+        /* background-color: green; */
+        padding: 0rem;
+    }
+    .congrats h2:nth-child(2) {
+        display: none;
     }
     .congrats h2 {
         font-size: 8vw;
     }
     .msg h6 {
-        font-size: 6vw;
+        font-size: 7vw;
     }
     .msg p {
-        font-size: 4vw;
+        font-size: 5vw;
     }
     .msg {
-        height: 18vh;
+        padding: 2rem 1rem;
         display: flex;
         align-items: center;
         justify-content: center;
     }
     .res-btn {
+        padding: .8rem;
         background-color: #000;
     }
     .res-btn button {
-        padding: 1rem 0rem;
         font-size: 4vw;
     }
     nav {
-        padding: 2rem 1rem;
+        padding: .7rem 1rem;
+    }
+    .all-result {
+        display: none;
+    }
+    .mode {
+        padding: .4rem .8rem;
     }
 }
